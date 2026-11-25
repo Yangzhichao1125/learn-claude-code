@@ -182,6 +182,7 @@ TODO = TodoManager()
 
 def run_todo_write(todos: list | str) -> str:
     try:
+        print(f"  ==== Received todos: {todos}")
         output = TODO.update(todos)
     except ValueError as e:
         return f"Error: {e}"
